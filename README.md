@@ -2,7 +2,7 @@
 
 Esse software tem como objetivo integrar os serviços oferecidos pelo Datasus, facilitando o acesso ás informações do Cartão Nacional de Saúde.
 
-Mais informações acerca do projeto podem ser encontradas na [Wiki](https://github.com/jhemarcos/cns/wiki) desse repositório.
+Mais informações acerca do projeto  e a documentação completa podem ser encontrados na [Wiki](https://github.com/jhemarcos/cns/wiki) desse repositório.
 
 ## Dependências
 * Java >= 1.7
