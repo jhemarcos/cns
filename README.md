@@ -7,7 +7,7 @@ Esse software tem como objetivo integrar os serviços oferecidos pelo Datasus, f
 Mais informações acerca do projeto  e a documentação completa podem ser encontrados na [Wiki](https://github.com/jhemarcos/cns/wiki) desse repositório.
 
 ## Dependências
-* Java >= 1.7
+* JDK >= 6
 
 ## Instalação
 Adicionar no seu pom.xml:
