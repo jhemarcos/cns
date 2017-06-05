@@ -12,7 +12,7 @@ Adicionar no seu pom.xml:
 
 ```xml
 <dependency>
-    <groupId>group.ip</groupId>
+    <groupId>group.id</groupId>
     <artifactId>artifact.id</artifactId>
     <version>1.0.0</version>
 </dependency>
