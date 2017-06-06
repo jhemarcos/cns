@@ -1,7 +1,4 @@
 language: java
 jdk:
 - oraclejdk7
-env:
-  - TEST_DIR=cns
-  - TEST_DIR=cns-api
-script: cd $TEST_DIR && mvn install && mvn test
+script: mvn install && mvn test
