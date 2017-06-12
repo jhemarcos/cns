@@ -2,6 +2,8 @@ package com.github.cns;
 
 import java.util.List;
 
+import br.com.jhemarcos.DadosDemograficos;
+
 public class DadosDemograficosImpl implements DadosDemograficos {
 	
 	private String respostaXml;
@@ -23,7 +25,13 @@ public class DadosDemograficosImpl implements DadosDemograficos {
 		return null;
 	}
 
-	public List<String> get(int codigo) {
+
+	public List<String> getIds(int codigo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String get(int codigo) {
 		// TODO Auto-generated method stub
 		return null;
 	}

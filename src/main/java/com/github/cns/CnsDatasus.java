@@ -1,5 +1,8 @@
 package com.github.cns;
 
+import br.com.jhemarcos.Cns;
+import br.com.jhemarcos.DadosDemograficos;
+
 public class CnsDatasus implements Cns {
 	
 	private ConexaoDatasus conexao;
@@ -24,6 +27,21 @@ public class CnsDatasus implements Cns {
 	
 	public String montaRequisicaoBuscaPorCPF(String cpf) {
 		return cpf;
+	}
+
+	public DadosDemograficos buscaPorCNS(String cns) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public DadosDemograficos buscaPorNome(String nome) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public DadosDemograficos buscaPorNomeMae(String nomeMae) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
