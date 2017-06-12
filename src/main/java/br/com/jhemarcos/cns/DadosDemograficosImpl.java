@@ -1,4 +1,4 @@
-package com.github.cns;
+package br.com.jhemarcos.cns;
 
 import java.util.List;
 
@@ -8,23 +8,16 @@ public class DadosDemograficosImpl implements DadosDemograficos {
 	
 	private String respostaXml;
 	
+	private boolean sucessoRequisicao;
+	
 	public DadosDemograficosImpl(String resposta) {
 		this.respostaXml = resposta;
 		if (resposta == null) {
-			throw new RuntimeException();
+			sucessoRequisicao = false;
+		} else {
+			sucessoRequisicao = true;
 		}
 	}
-
-	public String getNome() {
-		// Extrai de respostaXml o nome..
-		return null;
-	}
-
-	public List<String> getIds() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 
 	public List<String> getIds(int codigo) {
 		// TODO Auto-generated method stub
@@ -34,6 +27,14 @@ public class DadosDemograficosImpl implements DadosDemograficos {
 	public String get(int codigo) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public boolean sucesso(){
+		return sucessoRequisicao;
+	}
+	
+	public String getRespostaXml(){
+		return this.respostaXml;
 	}
 
 }

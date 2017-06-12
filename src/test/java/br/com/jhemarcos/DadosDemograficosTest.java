@@ -1,6 +1,8 @@
-package com.github.cns;
+package br.com.jhemarcos;
 
 import org.junit.Test;
+
+import br.com.jhemarcos.cns.DadosDemograficosImpl;
 
 public class DadosDemograficosTest {
 	

@@ -1,8 +1,11 @@
-package com.github.cns;
+package br.com.jhemarcos;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import br.com.jhemarcos.cns.CnsDatasus;
+import br.com.jhemarcos.cns.ConexaoDatasus;
 
 public class CnsDatasusTest {
 	
@@ -23,7 +26,7 @@ class MinhaConexaoDatasus implements ConexaoDatasus {
 	public boolean ok = false;
 	
 	public String requisicao(String xmlRequisicao) {
-		ok = "true".equals(xmlRequisicao);
+		ok = !"true".equals(xmlRequisicao);
 		return "ok";
 	}
 	

@@ -1,4 +1,4 @@
-package com.github.cns;
+package br.com.jhemarcos.cns;
 
 /**
  * Servicos oferecidos para conexao com Datasus para acesso ao CNS. 
