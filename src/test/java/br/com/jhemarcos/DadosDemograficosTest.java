@@ -1,15 +1,17 @@
 package br.com.jhemarcos;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import br.com.jhemarcos.cns.DadosDemograficosImpl;
 
 public class DadosDemograficosTest {
 	
-	@Test(expected = RuntimeException.class)
-	public void documentoXmlInvalido() {
-		
-		new DadosDemograficosImpl(null);				
+	@Test
+	public void documentoXmlNullo() {
+		DadosDemograficosImpl dadosDemograficosImpl = new DadosDemograficosImpl(null);
+		assertFalse(dadosDemograficosImpl.sucesso());
 	}
 
 }

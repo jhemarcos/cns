@@ -14,9 +14,8 @@ public class CnsDatasusConexaoTest {
 	@Test
 	public void cnsConsegueConectarBarramento() {
 
-		ConexaoDatasusImpl conexaoDatasusImpl = new ConexaoDatasusImpl("", "", false);
+		ConexaoDatasusImpl conexaoDatasusImpl = new ConexaoDatasusImpl("CADSUS.CNS.PDQ.PUBLICO", "kUXNmiiii#RDdlOELdoe00966", false);
 		CnsDatasus cns = new CnsDatasus(conexaoDatasusImpl);
-		
 		DadosDemograficosImpl dadosDemograficosImpl= (DadosDemograficosImpl) cns.buscaPorCPF("123.456.789-10");
 		
 		assertTrue(dadosDemograficosImpl.sucesso());

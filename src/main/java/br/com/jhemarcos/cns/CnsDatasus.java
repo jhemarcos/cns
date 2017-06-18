@@ -1,8 +1,5 @@
 package br.com.jhemarcos.cns;
 
-import java.io.InputStream;
-import java.util.Scanner;
-
 import br.com.jhemarcos.Cns;
 import br.com.jhemarcos.DadosDemograficos;
 
@@ -15,17 +12,9 @@ public class CnsDatasus implements Cns {
 	}
 
 	public DadosDemograficos buscaPorCPF(String cpf) {
-		// 1. Monta requisicao (documento XML)
-		// 2. Submete a requisicao
-		// 3. Monta instancia de DadosDemograficos com a resposta
-		
-		// Monta a requisicao aqui...
 		String xmlRequisicao = FileRequestUtils.getCPFXmlRequest(cpf);		
-		
-		// Submeter a requisicao
-		String xml = conexao.requisicao(xmlRequisicao);
-		
-		return new DadosDemograficosImpl(xml);
+		String xmlResponse = conexao.requisicao(xmlRequisicao);
+		return new DadosDemograficosImpl(xmlResponse);
 	}
 
 	public DadosDemograficos buscaPorCNS(String cns) {
