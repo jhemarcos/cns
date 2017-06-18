@@ -12,9 +12,9 @@ public final class FileRequestUtils {
 	private static final String NOME_MAE_XML_PATH_FILE = "br/com/jhemarcos/cns/nome_mae_request.xml";
 	
 	private static final String CPF_MATCH = "[[FIELD_CPF]]";
-	private static final String CNS_MATCH = "[[CNS_CPF]]";
-	private static final String NOME_MATCH = "[[NOME_CPF]]";
-	private static final String NOME_MAE_MATCH = "[[NOME_MAE_CPF]]";
+	private static final String CNS_MATCH = "[[FIELD_CNS]]";
+	private static final String NOME_MATCH = "[[FIELD_NOME]]";
+	private static final String NOME_MAE_MATCH = "[[FIELD_NOME_MAE]]";
 	
 	/**
 	 * Carrega o arquivo que contém a requisição xml padrão para busca
