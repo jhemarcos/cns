@@ -1,4 +1,4 @@
-package br.com.jhemarcos.cns;
+package br.com.jhemarcos.conexao;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -6,6 +6,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
 public class ConexaoDatasusImpl implements ConexaoDatasus {
@@ -55,7 +56,7 @@ public class ConexaoDatasusImpl implements ConexaoDatasus {
 		
 		try { 
 	        
-	        HttpClient client = new DefaultHttpClient();
+	        HttpClient client = HttpClientBuilder.create().build();
 	        HttpPost post = new HttpPost(this.endpoint);
 	        HttpEntity entity = new ByteArrayEntity(xmlRequisicao.getBytes("UTF-8"));
 	        post.setEntity(entity);

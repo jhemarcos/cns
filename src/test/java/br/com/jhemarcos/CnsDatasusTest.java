@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import br.com.jhemarcos.cns.CnsDatasus;
-import br.com.jhemarcos.cns.ConexaoDatasus;
+import br.com.jhemarcos.conexao.ConexaoDatasus;
 
 public class CnsDatasusTest {
 	

@@ -1,4 +1,4 @@
-package br.com.jhemarcos.cns;
+package br.com.jhemarcos.conexao;
 
 /**
  * Servicos oferecidos para conexao com Datasus para acesso ao CNS. 

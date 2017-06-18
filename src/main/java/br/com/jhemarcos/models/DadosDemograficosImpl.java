@@ -1,4 +1,4 @@
-package br.com.jhemarcos.cns;
+package br.com.jhemarcos.models;
 
 import java.util.List;
 

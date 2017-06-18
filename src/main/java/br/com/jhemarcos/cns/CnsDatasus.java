@@ -2,6 +2,9 @@ package br.com.jhemarcos.cns;
 
 import br.com.jhemarcos.Cns;
 import br.com.jhemarcos.DadosDemograficos;
+import br.com.jhemarcos.conexao.ConexaoDatasus;
+import br.com.jhemarcos.models.DadosDemograficosImpl;
+import br.com.jhemarcos.utils.FileRequestUtils;
 
 public class CnsDatasus implements Cns {
 	

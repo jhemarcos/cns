@@ -1,4 +1,4 @@
-package br.com.jhemarcos.cns;
+package br.com.jhemarcos.utils;
 
 import java.io.InputStream;
 import java.util.Scanner;

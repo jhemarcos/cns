@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import br.com.jhemarcos.cns.DadosDemograficosImpl;
+import br.com.jhemarcos.models.DadosDemograficosImpl;
 
 public class DadosDemograficosTest {
 	
