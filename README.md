@@ -23,4 +23,9 @@ Adicionar no seu pom.xml:
 ```
 
 ## Uso básico
-To do...
+
+```java
+ConexaoDatasusImpl cd = new ConexaoDatasusImpl ("MeuUsuario", "MinhaSenha", true);
+CnsDatasus cns = new CnsDatasus(cd);
+DadosDemograficosImpl dadosDemograficosResponse = cns.buscaPorCPF("71662652054");
+```
