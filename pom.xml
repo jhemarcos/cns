@@ -24,4 +24,123 @@
     </dependency>
 
   </dependencies>
+  
+  <name>cns</name>
+  <description>Cliente em JAVA para integração server-side com o DATASUS.</description>
+  <url>https://github.com/jhemarcos/cns</url>
+  <licenses>
+    <license>
+      <name>GNU General Public License v3.0</name>
+      <url>https://www.gnu.org/licenses/gpl-3.0.pt-br.html</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Jean Marcos</name>
+      <email>jeanmarcos.sw@gmail.com</email>
+      <organization>jhemarcos technologies inc.</organization>
+      <organizationUrl>http://www.jhemarcos.com.br</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
+    <developerConnection>scm:git:ssh://github.com:jhemarcos/cns.git</developerConnection>
+    <url>http://github.com/jhemarcos/cns/tree/master</url>
+    <tag>cns-1.0.0</tag>
+  </scm>
+  
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <executions>
+          <execution>
+          <id>attach-sources</id>
+          <goals>
+            <goal>jar-no-fork</goal>
+          </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <!--
+  Realizar deploy para o Repositório Central:
+  mvn deploy -Prelease
+   -->
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+		    <groupId>org.sonatype.plugins</groupId>
+		    <artifactId>nexus-staging-maven-plugin</artifactId>
+		    <version>1.6.7</version>
+		    <extensions>true</extensions>
+		    <configuration>
+		      <serverId>ossrh</serverId>
+		      <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+		      <autoReleaseAfterClose>true</autoReleaseAfterClose>
+		    </configuration>
+		  </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  
 </project>
