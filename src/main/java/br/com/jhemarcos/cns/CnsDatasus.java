@@ -14,25 +14,54 @@ public class CnsDatasus implements Cns {
 		this.conexao = conexao;
 	}
 
+	/**
+	 * Realiza uma busca no barramento datasus usando
+	 * como parâmetro um CPF válido
+	 * @param cpf {@link String} Número de CPF válido sem pontuações
+	 * @return {@link DadosDemograficosImpl} Instância de dados demográficos com a resposta do barramento
+	 */
 	public DadosDemograficos buscaPorCPF(String cpf) {
 		String xmlRequisicao = FileRequestUtils.getCPFXmlRequest(cpf);		
 		String xmlResponse = conexao.requisicao(xmlRequisicao);
 		return new DadosDemograficosImpl(xmlResponse);
 	}
 
+	/**
+	 * Realiza uma busca no barramento datasus usando
+	 * como parâmetro um CNS válido
+	 * @param cns {@link String} Número de CNS válido sem pontuações
+	 * @return {@link DadosDemograficosImpl} Instância de dados demográficos com a resposta do barramento
+	 */
 	public DadosDemograficos buscaPorCNS(String cns) {
-		// TODO Auto-generated method stub
-		return null;
+		String xmlRequisicao = FileRequestUtils.getCNSXmlRequest(cns);
+		String xmlResponse = conexao.requisicao(xmlRequisicao);
+		return new DadosDemograficosImpl(xmlResponse);
 	}
 
+	/**
+	 * Realiza uma busca no barramento datasus usando
+	 * como parâmetro um nome completo válido.
+	 * A listagem de nomes inválidos está disponível na wiki desse projeto no github.
+	 * @param nome {@link String} Nome completo válido
+	 * @return {@link DadosDemograficosImpl} Instância de dados demográficos com a resposta do barramento
+	 */
 	public DadosDemograficos buscaPorNome(String nome) {
-		// TODO Auto-generated method stub
-		return null;
+		String xmlRequisicao = FileRequestUtils.getNomeXmlRequest(nome);		
+		String xmlResponse = conexao.requisicao(xmlRequisicao);
+		return new DadosDemograficosImpl(xmlResponse);
 	}
 
+	/**
+	 * Realiza uma busca no barramento datasus usando
+	 * como parâmetro um nome de mãe completo válido.
+	 * A listagem de nomes inválidos está disponível na wiki desse projeto no github.
+	 * @param nomeMae {@link String} Nome completo válido
+	 * @return {@link DadosDemograficosImpl} Instância de dados demográficos com a resposta do barramento
+	 */
 	public DadosDemograficos buscaPorNomeMae(String nomeMae) {
-		// TODO Auto-generated method stub
-		return null;
+		String xmlRequisicao = FileRequestUtils.getNomeMaeXmlRequest(nomeMae);		
+		String xmlResponse = conexao.requisicao(xmlRequisicao);
+		return new DadosDemograficosImpl(xmlResponse);
 	}
 
 }

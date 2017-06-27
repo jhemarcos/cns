@@ -16,6 +16,30 @@ public class CnsDatasusTest {
 		cns.buscaPorCPF("12346678910");
 		assertTrue(cd.chamou);
 	}
+	
+	@Test
+	public void buscaPorCnsExigeChamarRequisicao() {
+		MinhaConexaoDatasus cd = new MinhaConexaoDatasus();
+		CnsDatasus cns = new CnsDatasus(cd);
+		cns.buscaPorCNS("170307449940005");
+		assertTrue(cd.chamou);
+	}
+	
+	@Test
+	public void buscaPorNomeExigeChamarRequisicao() {
+		MinhaConexaoDatasus cd = new MinhaConexaoDatasus();
+		CnsDatasus cns = new CnsDatasus(cd);
+		cns.buscaPorNome("JOSE SILVA E SANTOS");
+		assertTrue(cd.chamou);
+	}
+	
+	@Test
+	public void buscaPorNomeMaeExigeChamarRequisicao() {
+		MinhaConexaoDatasus cd = new MinhaConexaoDatasus();
+		CnsDatasus cns = new CnsDatasus(cd);
+		cns.buscaPorNomeMae("MARIA AUXILIADORA DOS SANTOS");
+		assertTrue(cd.chamou);
+	}
 
 }
 
