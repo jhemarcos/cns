@@ -12,7 +12,7 @@ import org.apache.http.util.EntityUtils;
 public class ConexaoDatasusImpl implements ConexaoDatasus {
 	
 	private static final String CADSUS_ENDPOINT_HOMOLOGACAO = "https://servicoshm.saude.gov.br/cadsus/PDQSupplier";
-	private static final String CADSUS_ENDPOINT_PRODUCAO = "https://servicoshm.saude.gov.br/cadsus/PDQSupplier";
+	private static final String CADSUS_ENDPOINT_PRODUCAO = "https://servicos.saude.gov.br/cadsus/PDQSupplier";
 	
 	private static final String USUARIO_MATCH = "[[FIELD_USUARIO]]";
 	private static final String SENHA_MATCH = "[[FIELD_SENHA]]";
