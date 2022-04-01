@@ -1,3 +1,7 @@
+> <img src="https://img.shields.io/maintenance/no/2014" />
+>
+> **Atenção:** O desenvolvimento deste projeto foi finalizado há anos. Provavelmente os webservices e regras para comunicação com o datasus já foram alterados neste tempo, então podem ser necessárias várias mudanças para que este projeto volte a operar. Fique a vontade para fazer um fork e continuar seu desenvolvimento.
+
 # CNS (Cartão Nacional de Saúde)
 
 [![Build Status](https://travis-ci.org/jhemarcos/cns.svg?branch=master)](https://travis-ci.org/jhemarcos/cns)
