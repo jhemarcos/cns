@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.com.jhemarcos</groupId>
   <artifactId>cns</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   
   <dependencies>
   	<dependency>
@@ -46,7 +46,7 @@
     <connection>scm:git:git://github.com/simpligility/ossrh-demo.git</connection>
     <developerConnection>scm:git:ssh://github.com:jhemarcos/cns.git</developerConnection>
     <url>http://github.com/jhemarcos/cns/tree/master</url>
-    <tag>cns-1.0.0</tag>
+    <tag>cns-1.0.1</tag>
   </scm>
   
   <distributionManagement>
@@ -62,6 +62,8 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
   
   <build>
@@ -130,7 +132,7 @@
           <plugin>
 		    <groupId>org.sonatype.plugins</groupId>
 		    <artifactId>nexus-staging-maven-plugin</artifactId>
-		    <version>1.6.7</version>
+		    <version>1.6.9</version>
 		    <extensions>true</extensions>
 		    <configuration>
 		      <serverId>ossrh</serverId>
